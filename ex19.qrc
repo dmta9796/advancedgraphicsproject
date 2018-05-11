@@ -1,0 +1,36 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>shadows.vert</file>
+    <file>shadows.frag</file>
+    <file>shadows2.vert</file>
+    <file>shadows2.frag</file>
+    <file>skybox.vert</file>
+    <file>skybox.frag</file>
+    <file>ex19a.vert</file>
+    <file>ex19b.vert</file>   
+    <file>terrain.vert</file>
+    <file>terrain.frag</file>
+    <file>water.vert</file>
+    <file>water.frag</file>
+    <file>models.vert</file> 
+    <file>models.frag</file>
+    <file>trees.vert</file> 
+    <file>trees.frag</file>
+    <file>comet.vert</file>
+    <file>ex19b.frag</file>
+    <file>particle.png</file>
+    <file>crate.png</file>
+    <file>grass.bmp</file>
+    <file>nevada_bk.png</file>
+    <file>nevada_dn.png</file>
+    <file>nevada_ft.png</file>
+    <file>nevada_lf.png</file>
+    <file>nevada_rt.png</file>
+    <file>nevada_up.png</file>
+    <file>Wall.jpg</file>
+    <file>WallNormal.jpg</file>
+    <file>wood2.bmp</file>
+    <file>roof.bmp</file>
+    <file>tree1.bmp</file>
+</qresource>
+</RCC>

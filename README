@@ -1,0 +1,95 @@
+Project: 
+
+how to run:
+-notes that the project might have issues as the framebuffers for qt have issues for 5.5 as noted here
+	-http://lists.qt-project.org/pipermail/interest/2016-February/020786.html
+Linux:
+-go to directory
+-qmake project.pro
+-make
+-./project
+-go to perspective mode (orthogonal is useless)
+
+The project so far has some of the models, the particle engine from hw09 and a cubemap which there
+was a paper about for using cubemaps for collisions and is useful for making the water better by reflection and refraction.
+The models each have their own class for orgnaization
+also the cubemaps would allow for single pass light refraction view for the water
+
+
+still to do
+- 
+-cubemap for collisions
+-make physics for particles
+-some improvement for water 
+-bump maps
+-heightmap of terrain
+
+
+update as of 4/27/2018
+
+-getting vbos of objects would not help making things look nicer so I would keep what I have
+
+stuff done since last time
+-fixed the terrain issue of being piecewise
+-added generated texture for the water
+-fixed issue of cube map not being centered around camera by finally finding the computation of the view matrix in ex07(suggested by student) and removing translation part(this took long time to debug)
+-now my framework has the ability to fetch the model and view matrices seprately as I need that for collisions and water reflections.
+
+
+still to do
+-fix issue with surface reflection
+-particle fireball collisions (this is the main feature of the program)
+-tree generation
+-shadows as that is something I promised on proposal
+
+
+issues
+-connecting the rotation slot to the trebuchet class data   (fixed by passing object parameters into the viewer function)
+				-brought issues in my structure due to object base class (defined a virtual method)
+				-brought a vtable error in linker when I tried to just pass the objects array to viewer (need to fix the entirety of my code)
+-getting the flat water surface to have proper raster reflection of the skybox. (the symptom is that the texture streches out on horizontal rotation)
+-making the shadow map buffer with qt.
+
+
+final submittion report
+how to launch
+-got to directory
+-qmake ./project
+-make
+-./project
+-go to perspective mode
+
+features of system
+-qt dialog enabled roation of trebuchet
+-trebuchet fire particle system
+	- the fire button starts/ends particle simulation
+	-doesn't have collision
+-cubemap skybox
+-water procedurally generated and has water reflection of the cubemap.
+-terrain generated from noise texture.
+
+
+issues
+-the biggest problem was the issue with attempting to render depth buffer to texture for shadowmap 
+
+
+
+
+
+
+
+sources used
+-https://learnopengl.com/Advanced-OpenGL/Cubemaps       
+-https://stackoverflow.com/questions/35137137/how-to-construct-a-cubemap-texture-using-qopengltexture (cubemap for qt)
+-http://www.spacegoo.com/publis/cubemapPhysics/article.pdf (cubemap for collision detection)
+-https://thebookofshaders.com/11/ (gave base for the procedural water)                                                                        
+-http://www.peroxide.dk/papers/collision/collision.pdf (suggested collision detection which makes more sense)
+-http://antongerdelan.net/opengl/cubemaps.html            (helped debug my reflections)
+-https://www.keithlantz.net/2011/10/lighting-and-environment-mapping-with-glsl/
+-
+-
+-
+-
+
+
+
